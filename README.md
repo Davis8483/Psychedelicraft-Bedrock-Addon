@@ -2,7 +2,7 @@
 
 ** Disclaimer: This mod is for entertainment purposes only. I do not approve of drug usage and activities from this addon should not be recreated irl.
 
-** Credit: I do not own any of the textures used they were ported from the original java ![Psychedelicraft](https://legacy.curseforge.com/minecraft/mc-mods/psychedelicraft) mod.
+** Credit: I do not own any of the textures used they were ported from the original java [Psychedelicraft](https://github.com/Ivorforce/Psychedelicraft) mod.
 
 ## Cannabis Plant
 ![cannabis_plant](https://github.com/Davis8483/Psychedelicraft-Bedrock-Addon/assets/76828148/34e2c846-4496-45c9-8c26-a20d2d227441)
@@ -40,7 +40,6 @@ Crafted using a glass block and iron ingot Has +1 attack damage and 1 durability
 Crafted with an empty syringe, Cocaine powder, and water bottle. When used gives Speed 3, Strength 1, Jump Boost 3, and Resistance 1 lasting for 2 minutes. With stronger effects comes a stronger cost with a 30% chance of overdose which is fatal. The Cocaine Syringe can also be used on other players and entities by hitting them with it.
 
 ## Drug Dealer
-![trader1](https://github.com/Davis8483/Psychedelicraft-Bedrock-Addon/assets/76828148/9a7717cb-1797-4c98-81f5-a912e1029434)
-![trader2](https://github.com/Davis8483/Psychedelicraft-Bedrock-Addon/assets/76828148/66870ced-4d4f-44e0-b2c8-2d5b8108be37)
+<img src="https://github.com/Davis8483/Psychedelicraft-Bedrock-Addon/assets/76828148/9a7717cb-1797-4c98-81f5-a912e1029434" height="300"/></img><img src="https://github.com/Davis8483/Psychedelicraft-Bedrock-Addon/assets/76828148/66870ced-4d4f-44e0-b2c8-2d5b8108be37" height="300"/></img>
 
 The most useless mob in the game is the Wandering Trader. So I replaced him with the Drug Dealer. You can trade various items from this addon with him.
