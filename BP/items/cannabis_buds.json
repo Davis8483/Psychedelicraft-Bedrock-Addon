@@ -1,0 +1,64 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "psychedelicraft:cannabis_buds",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": "low",
+				"can_always_eat": true,
+				"on_consume": {
+					"event": "psychedelicraft:consume"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "cannabis_buds"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:render_offsets": "apple"
+		},
+		"events": {
+			"psychedelicraft:consume": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"/stopsound @s psychedelicraft.high",
+								"/playsound psychedelicraft.high @s ~ ~ ~ 0.6"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "darkness",
+							"amplifier": 0,
+							"duration": 30,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "nausea",
+							"amplifier": 0,
+							"duration": 30,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "resistance",
+							"amplifier": 0,
+							"duration": 30,
+							"target": "holder"
+						}
+					}
+				]
+			}
+		}
+	}
+}

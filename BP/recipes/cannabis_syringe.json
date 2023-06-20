@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "psychedelicraft:cannabis_syringe_crafting_table"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "priority": 0,
+        "ingredients": [
+            {
+                "item": "psychedelicraft:empty_syringe",
+                "count": 1
+            },
+            {
+                "item": "psychedelicraft:dried_cannabis_buds",
+                "count": 1
+            },
+            {
+                "item": "minecraft:potion",
+                "count": 1,
+                "data": 0
+            }
+        ],
+        "result": {
+            "item": "psychedelicraft:cannabis_syringe"
+        }
+    }
+}

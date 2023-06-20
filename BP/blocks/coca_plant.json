@@ -1,0 +1,249 @@
+{
+  "format_version": "1.19.30",
+  "minecraft:block": {
+    "description": {
+      "identifier": "psychedelicraft:coca_plant",
+      "menu_category": {
+        "category": "nature",
+        "is_hidden_in_commands": false
+      },
+      "properties": {
+        "psychedelicraft:crop_stage": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "components": {
+      "tag:coca_plant": {},
+      "minecraft:flammable": true,
+      "minecraft:light_dampening": 0,
+      "minecraft:collision_box": false,
+      "minecraft:geometry": "geometry.plant",
+      "minecraft:loot": "loot_tables/blocks/empty_loot.json",
+      "minecraft:on_player_destroyed": {
+        "event": "psychedelicraft:update_loot"
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "block_filter": [
+              "minecraft:farmland"
+            ],
+            "allowed_faces": [
+              "up"
+            ]
+          }
+        ]
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "cocaPlant",
+          "render_method": "alpha_test",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:random_ticking": {
+        "on_tick": {
+          "condition": "math.random_integer(1, 15) == 1",
+          "event": "psychedelicraft:add_stage",
+          "target": "self"
+        }
+      },
+      "minecraft:queued_ticking": {
+        "looping": true,
+        "interval_range": [
+          10,
+          10
+        ],
+        "on_tick": {
+          "event": "psychedelicraft:detect_liquid",
+          "target": "self"
+        }
+      },
+      "minecraft:on_interact": {
+        "event": "psychedelicraft:bonemeal",
+        "condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:bone_meal')"
+      }
+    },
+    "events": {
+      "psychedelicraft:detect_liquid": {
+        "sequence": [
+          { // if water is detected above or next to the crop, run "psychedelicraft:update_loot"
+            "condition": "q.block_neighbor_has_any_tag(1,0,0,'water') || q.block_neighbor_has_any_tag(-1,0,0,'water') || q.block_neighbor_has_any_tag(0,0,1,'water') || q.block_neighbor_has_any_tag(0,0,-1,'water') || q.block_neighbor_has_any_tag(0,1,0,'water')",
+            "trigger": {
+              "event": "psychedelicraft:update_loot"
+            }
+          },
+          { // if water is detected above or next to the crop, replace the block with air
+            "condition": "q.block_neighbor_has_any_tag(1,0,0,'water') || q.block_neighbor_has_any_tag(-1,0,0,'water') || q.block_neighbor_has_any_tag(0,0,1,'water') || q.block_neighbor_has_any_tag(0,0,-1,'water') || q.block_neighbor_has_any_tag(0,1,0,'water')",
+            "die": {}
+          }
+        ]
+      },
+      "psychedelicraft:update_loot": {
+        "sequence": [
+          {
+            "condition": "q.block_property('psychedelicraft:crop_stage') == 0",
+            "spawn_loot": {
+              "table": "loot_tables/blocks/coca_seed_loot.json"
+            }
+          },
+          {
+            "condition": "q.block_property('psychedelicraft:crop_stage') == 1",
+            "spawn_loot": {
+              "table": "loot_tables/blocks/coca_seed_loot.json"
+            }
+          },
+          {
+            "condition": "q.block_property('psychedelicraft:crop_stage') == 2",
+            "spawn_loot": {
+              "table": "loot_tables/blocks/coca_seed_loot.json"
+            }
+          },
+          {
+            "condition": "q.block_property('psychedelicraft:crop_stage') == 3",
+            "spawn_loot": {
+              "table": "loot_tables/blocks/coca_grown_loot.json"
+            }
+          }
+        ]
+      },
+      "psychedelicraft:add_stage": {
+        "sequence": [
+          {
+            "condition": "q.block_property('psychedelicraft:crop_stage') < 3",
+            "set_block_property": {
+              "psychedelicraft:crop_stage": "q.block_property('psychedelicraft:crop_stage')+1"
+            }
+          }
+        ]
+      },
+      "psychedelicraft:bonemeal": {
+        "sequence": [
+          {
+            "condition": "q.block_property('psychedelicraft:crop_stage') < 3",
+            "set_block_property": {
+              "psychedelicraft:crop_stage": "q.block_property('psychedelicraft:crop_stage')+math.random(1, 3-q.block_property('psychedelicraft:crop_stage'))"
+            },
+            "decrement_stack": {}
+          },
+          {
+            "run_command": {
+              "command": [
+                "particle minecraft:crop_growth_emitter ~ ~ ~",
+                "playsound item.bone_meal.use @a ~ ~ ~"
+              ],
+              "target": "self"
+            }
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('psychedelicraft:crop_stage') == 0",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cocaPlant",
+              "render_method": "alpha_test",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [
+              -8,
+              0,
+              -8
+            ],
+            "size": [
+              16,
+              8,
+              16
+            ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('psychedelicraft:crop_stage') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cocaPlant1",
+              "render_method": "alpha_test",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [
+              -8,
+              0,
+              -8
+            ],
+            "size": [
+              16,
+              13,
+              16
+            ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('psychedelicraft:crop_stage') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cocaPlant2",
+              "render_method": "alpha_test",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [
+              -8,
+              0,
+              -8
+            ],
+            "size": [
+              16,
+              15,
+              16
+            ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('psychedelicraft:crop_stage') == 3",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cocaPlant3",
+              "render_method": "alpha_test",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [
+              -8,
+              0,
+              -8
+            ],
+            "size": [
+              16,
+              15,
+              16
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

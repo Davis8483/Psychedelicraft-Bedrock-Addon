@@ -1,0 +1,12 @@
+{
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "psychedelicraft.high": {
+            "category": "neutral",
+            "sounds": [
+                "sounds/high"
+            ],
+            "max_distance": 1000.0
+        }
+    }
+}

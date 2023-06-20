@@ -1,0 +1,74 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "psychedelicraft:joint",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:durability": {
+				"max_durability": 4
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "joint"
+			},
+			"minecraft:creative_category": {
+				"parent": "equipment"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "psychedelicraft:use"
+				}
+			}
+		},
+		"events": {
+			"psychedelicraft:use": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"/particle minecraft:campfire_tall_smoke_particle ~ ~1 ~",
+								"/particle minecraft:campfire_smoke_particle ~ ~1 ~",
+								"/stopsound @s psychedelicraft.high",
+								"/playsound psychedelicraft.high @s ~ ~ ~ 0.6"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "darkness",
+							"amplifier": 0,
+							"duration": 30,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "nausea",
+							"amplifier": 0,
+							"duration": 30,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "resistance",
+							"amplifier": 0,
+							"duration": 30,
+							"target": "holder"
+						}
+					},
+					{
+						"damage": {
+							"amount": 1,
+							"target": "self",
+							"type": "all"
+						}
+					}
+				]
+			}
+		}
+	}
+}

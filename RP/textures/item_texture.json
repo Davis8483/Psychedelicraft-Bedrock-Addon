@@ -1,0 +1,42 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"dried_coca_leaves": {
+			"textures": "textures/items/driedcocaleaves"
+		},
+		"coca_seeds": {
+			"textures": "textures/items/cocaseeds"
+		},
+		"coca_leaves": {
+			"textures": "textures/items/cocaleaf"
+		},
+		"cocaine_powder": {
+			"textures": "textures/items/cocainepowder"
+		},
+		"empty_syringe": {
+			"textures": "textures/items/syringe"
+		},
+		"cocaine_syringe": {
+			"textures": "textures/items/cocainesyringe"
+		},
+		"cannabis_seeds": {
+			"textures": "textures/items/cannabisSeeds"
+		},
+		"cannabis_leaf": {
+			"textures": "textures/items/cannabisLeaf"
+		},
+		"dried_cannabis_leaf": {
+			"textures": "textures/items/driedCannabisLeaves"
+		},
+		"cannabis_buds": {
+			"textures": "textures/items/cannabisBuds"
+		},
+		"dried_cannabis_buds": {
+			"textures": "textures/items/driedCannabisBuds"
+		},
+		"joint": {
+			"textures": "textures/items/joint"
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "psychedelicraft:dried_cannabis_leaf",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "dried_cannabis_leaf"
+			},
+			"minecraft:creative_category": {
+				"parent": "nature"
+			}
+		}
+	}
+}

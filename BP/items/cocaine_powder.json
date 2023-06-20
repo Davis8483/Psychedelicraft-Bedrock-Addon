@@ -1,0 +1,107 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "psychedelicraft:cocaine_powder",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"can_always_eat": true,
+				"nutrition": 0,
+				"saturation_modifier": "low",
+				"on_consume": {
+					"event": "psychedelicraft:consume",
+					"target": "self"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "cocaine_powder"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			}
+		},
+		"events": {
+			"psychedelicraft:consume": {
+				"sequence": [
+					{
+						"add_mob_effect": {
+							"effect": "speed",
+							"amplifier": 0,
+							"duration": 120,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "jump_boost",
+							"amplifier": 0,
+							"duration": 120,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "strength",
+							"amplifier": 0,
+							"duration": 120,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "resistance",
+							"amplifier": 0,
+							"duration": 120,
+							"target": "holder"
+						}
+					},
+					{
+						"randomize": [
+							{
+								"weight": 1.0,
+								"sequence": [
+									{
+										"run_command": {
+											"command": "/tellraw @a {\"rawtext\":[{\"selector\":\"@s\"},{\"text\":\"§6 is overdosing on Cocainë!\"}]}"
+										}
+									},
+									{
+										"add_mob_effect": {
+											"effect": "darkness",
+											"amplifier": 0,
+											"duration": 120,
+											"target": "holder"
+										}
+									},
+									{
+										"add_mob_effect": {
+											"effect": "nausea",
+											"amplifier": 0,
+											"duration": 120,
+											"target": "holder"
+										}
+									},
+									{
+										"add_mob_effect": {
+											"effect": "wither",
+											"amplifier": 1,
+											"duration": 120,
+											"target": "holder"
+										}
+									}
+								]
+							},
+							{
+								"weight": 9.0
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

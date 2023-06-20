@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "psychedelicraft:joint2_crafting_table"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"P",
+			"B",
+			"P"
+		],
+		"key": {
+			"P": {
+				"item": "minecraft:paper"
+			},
+			"B": {
+				"item": "psychedelicraft:dried_cannabis_buds"
+			}
+		},
+		"result": {
+			"item": "psychedelicraft:joint"
+		}
+	}
+}

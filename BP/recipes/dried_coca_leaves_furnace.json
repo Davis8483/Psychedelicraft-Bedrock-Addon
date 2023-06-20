@@ -1,0 +1,13 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "psychedelicraft:dried_coca_leaves_furnace"
+        },
+        "input": "psychedelicraft:coca_leaves",
+        "output": "psychedelicraft:dried_coca_leaves",
+        "tags": [
+            "furnace"
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "psychedelicraft:empty_syringe_crafting_table"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "I",
+            "G"
+        ],
+        "key": {
+            "G": {
+                "item": "minecraft:glass"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "result": {
+            "item": "psychedelicraft:empty_syringe"
+        }
+    }
+}

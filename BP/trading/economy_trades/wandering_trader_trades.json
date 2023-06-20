@@ -1,0 +1,181 @@
+{
+    "tiers": [
+        {
+            "groups": [
+                {
+                    "num_to_select": 2,
+                    "trades": [
+                        {
+                            "max_uses": 5,
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 6
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "psychedelicraft:cannabis_seeds"
+                                }
+                            ]
+                        },
+                        {
+                            "max_uses": 5,
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 8
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "psychedelicraft:coca_seeds"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 6,
+                    "trades": [
+                        {
+                            "max_uses": 2,
+                            "wants": [
+                                {
+                                    "item": "psychedelicraft:cocaine_syringe",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 3
+                                }
+                            ]
+                        },
+                        {
+                            "max_uses": 5,
+                            "wants": [
+                                {
+                                    "item": "psychedelicraft:cocaine_powder",
+                                    "quantity": 5
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 1
+                                }
+                            ]
+                        },
+                        {
+                            "max_uses": 5,
+                            "wants": [
+                                {
+                                    "item": "psychedelicraft:empty_syringe",
+                                    "quantity": 5
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 1
+                                }
+                            ]
+                        },
+                        {
+                            "max_uses": 5,
+                            "wants": [
+                                {
+                                    "item": "psychedelicraft:joint",
+                                    "quantity": 3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 1
+                                }
+                            ]
+                        },
+                        {
+                            "max_uses": 2,
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 5
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "psychedelicraft:cocaine_syringe",
+                                    "quantity": 1
+                                }
+                            ]
+                        },
+                        {
+                            "max_uses": 5,
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "psychedelicraft:empty_syringe",
+                                    "quantity": 2
+                                }
+                            ]
+                        },
+                        {
+                            "max_uses": 5,
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "psychedelicraft:cocaine_powder",
+                                    "quantity": 1
+                                }
+                            ]
+                        },
+                        {
+                            "max_uses": 5,
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "psychedelicraft:joint",
+                                    "quantity": 2
+                                }
+                            ]
+                        },
+                        {
+                            "max_uses": 5,
+                            "wants": [
+                                {
+                                    "item": "psychedelicraft:cannabis_buds",
+                                    "quantity": 3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

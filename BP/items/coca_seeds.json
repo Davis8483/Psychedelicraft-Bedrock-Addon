@@ -1,0 +1,20 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "psychedelicraft:coca_seeds",
+      "category": "nature"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "coca_seeds"
+      },
+      "minecraft:block_placer": {
+        "block": "psychedelicraft:coca_plant",
+        "use_on": [
+          "minecraft:farmland"
+        ]
+      }
+    }
+  }
+}

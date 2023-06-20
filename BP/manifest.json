@@ -1,0 +1,55 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "Drug mod for Minecraft Bedrock | MIT License",
+		"name": " Psychedelicraft",
+		"uuid": "005d0102-e678-39f7-9cb0-686d0a2de8d6",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			19,
+			0
+		]
+	},
+	"modules": [
+		{
+			"description": "Drug mod for Minecraft Bedrock | MIT License",
+			"type": "data",
+			"uuid": "7d338df0-10ec-3723-9423-9c25d9cfd2eb",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "6f67ec49-0a0d-3b44-a1d8-c35f38f6d9b5",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Davis8483",
+			"Ivorforce"
+		],
+		"license": "MIT License",
+		"generated_with": {
+			"bridge": [
+				"2.6.0"
+			],
+			"dash": [
+				"0.10.8"
+			]
+		}
+	}
+}

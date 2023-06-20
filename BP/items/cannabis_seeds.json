@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "psychedelicraft:cannabis_seeds",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "cannabis_seeds"
+			},
+			"minecraft:block_placer": {
+				"block": "psychedelicraft:cannabis_plant",
+				"use_on": [
+					"minecraft:farmland"
+				]
+			},
+			"minecraft:creative_category": {
+				"parent": "nature"
+			}
+		}
+	}
+}

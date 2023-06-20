@@ -1,0 +1,221 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "psychedelicraft:cocaine_syringe",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "cocaine_syringe"
+			},
+			"minecraft:damage": 1,
+			"minecraft:max_stack_size": 1,
+			"minecraft:durability": {
+				"max_durability": 0
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "psychedelicraft:hit"
+				},
+				"on_not_hurt_entity": {
+					"event": "psychedelicraft:hit"
+				}
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "psychedelicraft:use"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "equipment"
+			}
+		},
+		"events": {
+			"psychedelicraft:hit": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"/playsound bucket.empty_water @a ~ ~ ~"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "speed",
+							"amplifier": 2,
+							"duration": 120,
+							"target": "other"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "jump_boost",
+							"amplifier": 2,
+							"duration": 120,
+							"target": "other"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "strength",
+							"amplifier": 0,
+							"duration": 120,
+							"target": "other"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "resistance",
+							"amplifier": 0,
+							"duration": 120,
+							"target": "other"
+						}
+					},
+					{
+						"damage": {
+							"amount": 1,
+							"type": "all"
+						}
+					},
+					{
+						"randomize": [
+							{
+								"weight": 3.0,
+								"sequence": [
+									{
+										"run_command": {
+											"command": "/tellraw @a {\"rawtext\":[{\"selector\":\"@s\"},{\"text\":\"§6 is overdosing on Cocainë!\"}]}",
+											"target": "other"
+										}
+									},
+									{
+										"add_mob_effect": {
+											"effect": "darkness",
+											"amplifier": 0,
+											"duration": 120,
+											"target": "other"
+										}
+									},
+									{
+										"add_mob_effect": {
+											"effect": "nausea",
+											"amplifier": 0,
+											"duration": 120,
+											"target": "other"
+										}
+									},
+									{
+										"add_mob_effect": {
+											"effect": "wither",
+											"amplifier": 1,
+											"duration": 120,
+											"target": "other"
+										}
+									}
+								]
+							},
+							{
+								"weight": 7.0
+							}
+						]
+					}
+				]
+			},
+			"psychedelicraft:use": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"/playsound bucket.empty_water @a ~ ~ ~"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "speed",
+							"amplifier": 2,
+							"duration": 120,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "jump_boost",
+							"amplifier": 2,
+							"duration": 120,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "strength",
+							"amplifier": 0,
+							"duration": 120,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "resistance",
+							"amplifier": 0,
+							"duration": 120,
+							"target": "holder"
+						}
+					},
+					{
+						"damage": {
+							"amount": 1,
+							"type": "all"
+						}
+					},
+					{
+						"randomize": [
+							{
+								"weight": 3.0,
+								"sequence": [
+									{
+										"run_command": {
+											"command": "/tellraw @a {\"rawtext\":[{\"selector\":\"@s\"},{\"text\":\"§6 is overdosing on Cocainë!\"}]}",
+											"target": "holder"
+										}
+									},
+									{
+										"add_mob_effect": {
+											"effect": "darkness",
+											"amplifier": 0,
+											"duration": 120,
+											"target": "holder"
+										}
+									},
+									{
+										"add_mob_effect": {
+											"effect": "nausea",
+											"amplifier": 0,
+											"duration": 120,
+											"target": "holder"
+										}
+									},
+									{
+										"add_mob_effect": {
+											"effect": "wither",
+											"amplifier": 1,
+											"duration": 120,
+											"target": "holder"
+										}
+									}
+								]
+							},
+							{
+								"weight": 7.0
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}
