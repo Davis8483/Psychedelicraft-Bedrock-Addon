@@ -1,5 +1,5 @@
 {
-    "format_version": "1.12",
+    "format_version": "1.21.51",
     "minecraft:recipe_furnace": {
         "description": {
             "identifier": "psychedelicraft:dried_coca_leaves_furnace"

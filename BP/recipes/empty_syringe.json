@@ -1,5 +1,5 @@
 {
-    "format_version": "1.12",
+    "format_version": "1.21.51",
     "minecraft:recipe_shaped": {
         "description": {
             "identifier": "psychedelicraft:empty_syringe_crafting_table"

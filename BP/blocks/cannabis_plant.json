@@ -1,5 +1,5 @@
 {
-  "format_version": "1.19.30",
+  "format_version": "1.21.51",
   "minecraft:block": {
     "description": {
       "identifier": "psychedelicraft:cannabis_plant",
@@ -72,13 +72,13 @@
     "events": {
       "psychedelicraft:detect_liquid": {
         "sequence": [
-          { // if water is detected above or next to the crop, run "psychedelicraft:update_loot"
+          { 
             "condition": "q.block_neighbor_has_any_tag(1,0,0,'water') || q.block_neighbor_has_any_tag(-1,0,0,'water') || q.block_neighbor_has_any_tag(0,0,1,'water') || q.block_neighbor_has_any_tag(0,0,-1,'water') || q.block_neighbor_has_any_tag(0,1,0,'water')",
             "trigger": {
               "event": "psychedelicraft:update_loot"
             }
           },
-          { // if water is detected above or next to the crop, replace the block with air
+          { 
             "condition": "q.block_neighbor_has_any_tag(1,0,0,'water') || q.block_neighbor_has_any_tag(-1,0,0,'water') || q.block_neighbor_has_any_tag(0,0,1,'water') || q.block_neighbor_has_any_tag(0,0,-1,'water') || q.block_neighbor_has_any_tag(0,1,0,'water')",
             "die": {}
           }
