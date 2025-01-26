@@ -2,7 +2,7 @@
 
 ** Disclaimer: This mod is for entertainment purposes only. I do not approve of drug usage and activities from this addon should not be recreated irl.
 
-** Credit: I do not own any of the textures used they were ported from the original java [Psychedelicraft](https://github.com/Ivorforce/Psychedelicraft) mod. This is a fork of the original mod to fix it after HCF was removed from Bedrock
+** Credit: I do not own any of the textures used they were ported from the original java [Psychedelicraft](https://github.com/Ivorforce/Psychedelicraft) mod.
 
 ## Cannabis Plant
 ![cannabis_plant](https://github.com/Davis8483/Psychedelicraft-Bedrock-Addon/assets/76828148/34e2c846-4496-45c9-8c26-a20d2d227441)
