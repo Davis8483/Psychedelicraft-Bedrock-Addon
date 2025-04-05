@@ -1,3 +1,5 @@
+# Important! This addon is currently not in a functional state, work will be continued on it after Mojang releases the v2 scripting api.
+
 # 🌿 Psychedelicraft - Drugs Addon for Minecraft Bedrock
 
 ** Disclaimer: This mod is for entertainment purposes only. I do not approve of drug usage and activities from this addon should not be recreated irl.
